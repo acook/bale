@@ -1,0 +1,15 @@
+one:
+  priority: 1
+  body: MyText
+  type: MyString
+  sender: 
+  receiver: 
+  route: MyText
+
+two:
+  priority: 1
+  body: MyText
+  type: MyString
+  sender: 
+  receiver: 
+  route: MyText

@@ -1,0 +1,28 @@
+= form_for @message do |f|
+  = f.error_messages
+  %p
+    = f.label :priority
+    %br
+    = f.text_field :priority
+  %p
+    = f.label :body
+    %br
+    = f.text_area :body
+  %p
+    = f.label :type
+    %br
+    = f.text_field :type
+  %p
+    = f.label :sender_id
+    %br
+    = f.text_field :sender_id
+  %p
+    = f.label :receiver_id
+    %br
+    = f.text_field :receiver_id
+  %p
+    = f.label :route
+    %br
+    = f.text_area :route
+  %p
+    = f.submit

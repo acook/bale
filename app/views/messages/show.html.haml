@@ -1,0 +1,27 @@
+- title "Message"
+
+%p
+  %strong Priority:
+  = @message.priority
+%p
+  %strong Body:
+  = @message.body
+%p
+  %strong Type:
+  = @message.type
+%p
+  %strong Sender:
+  = @message.sender_id
+%p
+  %strong Receiver:
+  = @message.receiver_id
+%p
+  %strong Route:
+  = @message.route
+
+%p
+  = link_to "Edit", edit_message_path(@message)
+  |
+  = link_to "Destroy", @message, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", messages_path

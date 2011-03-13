@@ -1,0 +1,16 @@
+= form_for @actor do |f|
+  = f.error_messages
+  %p
+    = f.label :address
+    %br
+    = f.text_field :address
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+  %p
+    = f.label :known_contacts
+    %br
+    = f.text_field :known_contacts
+  %p
+    = f.submit

@@ -1,0 +1,23 @@
+- title "Messages"
+
+%table
+  %tr
+    %th Priority
+    %th Body
+    %th Type
+    %th Sender
+    %th Receiver
+    %th Route
+  - for message in @messages
+    %tr
+      %td= message.priority
+      %td= message.body
+      %td= message.type
+      %td= message.sender_id
+      %td= message.receiver_id
+      %td= message.route
+      %td= link_to 'Show', message
+      %td= link_to 'Edit', edit_message_path(message)
+      %td= link_to 'Destroy', message, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Message", new_message_path

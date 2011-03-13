@@ -1,0 +1,17 @@
+- title "Actors"
+
+%table
+  %tr
+    %th Address
+    %th Name
+    %th Known contacts
+  - for actor in @actors
+    %tr
+      %td= actor.address
+      %td= actor.name
+      %td= actor.known_contacts
+      %td= link_to 'Show', actor
+      %td= link_to 'Edit', edit_actor_path(actor)
+      %td= link_to 'Destroy', actor, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Actor", new_actor_path
