@@ -9,10 +9,12 @@ gem 'sqlite3'
 
 gem 'haml'
 gem 'haml-rails'
+gem 'json'
 
 group :development, :test do
   gem 'rspec'
   gem 'shoulda'
+  gem 'mocha'
 
   gem 'nifty-generators'
 end 
