@@ -17,10 +17,11 @@ class Actor < ActiveRecord::Base
     new_actor_object.address = address
     new_actor_object.save!
 
-    #new_actor_process = fork do
-      system "BALE_ACTOR_NAME=#{name} rails s -p #{port}"
-    #end
-    #Process.detach new_actor_process
+    new_actor_process = fork do
+      system "bash --login -c \"BALE_ACTOR_NAME=#{name} rake db:schema:load\""
+      system "bash --login -c \"BALE_ACTOR_NAME=#{name} rails s -p #{port}\""
+    end
+    Process.detach new_actor_process
   end
 
   private 
