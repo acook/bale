@@ -5,22 +5,22 @@ gem 'rails', '3.0.5'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'sqlite3'     #=> SQL datbase in a file
 
-gem 'haml'
-gem 'haml-rails'
-gem 'json'
+gem 'haml'        #=> HAML and SASS intermediary markup languages
+gem 'haml-rails'  #=> HAML generators in Rails
+gem 'yajl-ruby'        #=> JSON parsing
 
 group :development, :test do
-  gem 'rspec'
-  gem 'shoulda'
-  gem 'mocha'
+  gem 'rspec'     #=> RSPEC testing framework
+  gem 'shoulda'   #=> Additional semantic prettification for test writing
+  gem 'mocha'     #=> Object mocking framework
 
-  gem 'nifty-generators'
+  gem 'nifty-generators' #=> Replaces the built-in scaffolding generators and includes a few other new ones
 end 
 
 # Use unicorn as the web server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'
